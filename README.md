@@ -10,3 +10,7 @@ What it is for:
 No gate depends on this repo: the kit's tests replay the recordings, never this repo.
 
 Each lane prefixes its branches with its lane key (for example `gh1249-`) and names its issues and PRs after the lane, so concurrent lanes stay out of each other's way.
+
+## CI
+
+`.github/workflows/check.yml` (workflow `check`, as the kit's templates name theirs) exists so the repo looks like a real target: lanes' merge-ask checks and post-merge step 2 (main CI) read real green checks here. It is one cheap job, `check`, on pull requests and on push to main, with no checkout and no installs, so each run takes under a minute (private Actions minutes are the owner's). Keep it that way.

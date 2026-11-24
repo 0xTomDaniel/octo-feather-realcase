@@ -1,0 +1,13 @@
+# One cheap job so this standing test repo looks like a real target: a lane's merge-ask and post-merge
+# step 2 read real green checks. No checkout, no installs: each run takes seconds (README, CI).
+name: check
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo ok
