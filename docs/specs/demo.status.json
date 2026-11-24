@@ -1,1 +1,1 @@
-{"spec": "demo.spec.html", "accepted_commit": "0123abc", "criteria": {"acceptance-a": {"status": "planned", "pr": null}, "acceptance-b": {"status": "planned", "pr": null}, "acceptance-c": {"status": "planned", "pr": null}}}
+{"spec": "demo.spec.html", "accepted_commit": "0123abc", "criteria": {"acceptance-a": {"status": "built", "pr": 23}, "acceptance-b": {"status": "built", "pr": 23}, "acceptance-c": {"status": "planned", "pr": null}}}
