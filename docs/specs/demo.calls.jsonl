@@ -1,0 +1,1 @@
+{"at": "2026-11-24T03:00:00Z", "lane": "gh1255", "role": "supervisor", "kind": "clarifies", "anchors": ["acceptance-a"], "criteria": ["acceptance-a"], "what": "acceptance-a's wording made exact", "why": "the realcase recording for #1266", "passes_as_written": false, "evidence": "a recorded case of the merge guard (octo-feather #1266)"}
