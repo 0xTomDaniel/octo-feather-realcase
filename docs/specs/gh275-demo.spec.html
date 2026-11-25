@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gh275 demo - spec</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./.style/spec.css">
+</head>
+<body>
+<article class="spec" data-spec-version="1" data-spec-contract="shaped-sections-v1">
+
+<header data-anchor="header">
+<h1 data-anchor="title">gh275 demo (overlap)</h1>
+<p class="lede" data-anchor="context">A throwaway fixture spec for octo-feather issue 275: <code>realcase wave</code> prints a farewell. Never build it.</p>
+</header>
+
+<section data-spec-section="user-stories" data-anchor="user-stories" id="user-stories">
+<h2>User stories</h2>
+<p data-user-story data-user-facing="true" data-guided-journey="no" data-anchor="story-greet">As a user, I run realcase from the terminal and it waves goodbye.</p>
+</section>
+
+<section data-spec-section="acceptance" data-anchor="acceptance" id="acceptance">
+<h2>Acceptance criteria</h2>
+<p data-acceptance-criterion data-anchor="acceptance-greet-default" data-story="story-greet"><span data-acceptance-scenario>Given a user with realcase installed, When they run <code>realcase wave</code> with no name,</span> <span data-acceptance-observable>Then the command exits 0 and prints <code>Goodbye, world!</code> on one line.</span></p>
+<p data-acceptance-criterion data-anchor="acceptance-greet-name" data-story="story-greet"><span data-acceptance-scenario>Given a user with realcase installed, When they run <code>realcase wave</code> with a name,</span> <span data-acceptance-observable>Then the command exits 0 and prints <code>Goodbye, </code> followed by that name and <code>!</code> on one line.</span></p>
+</section>
+
+<section data-spec-section="modular-boundaries" data-anchor="modular-boundaries" id="modular-boundaries">
+<h2>Modular boundaries</h2>
+<p data-modular-boundary data-anchor="boundary-greet"><span data-boundary-responsibility>The wave command owns the farewell.</span> <span data-boundary-seam>Caller-facing seam: the <code>realcase wave</code> CLI.</span> <span data-boundary-dependency>Dependency direction: self-contained.</span> <span data-boundary-scope>Observable scope: the command's stdout, stderr and exit code.</span></p>
+</section>
+
+</article>
+</body>
+</html>
