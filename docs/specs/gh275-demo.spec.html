@@ -23,7 +23,8 @@
 <section data-spec-section="acceptance" data-anchor="acceptance" id="acceptance">
 <h2>Acceptance criteria</h2>
 <p data-acceptance-criterion data-anchor="acceptance-greet-default" data-story="story-greet"><span data-acceptance-scenario>Given a user with realcase installed, When they run <code>realcase greet</code> with no name,</span> <span data-acceptance-observable>Then the command exits 0 and prints <code>Hello, world!</code> on one line.</span></p>
-<p data-acceptance-criterion data-anchor="acceptance-greet-name" data-story="story-greet"><span data-acceptance-scenario>Given a user with realcase installed, When they run <code>realcase greet</code> with a name,</span> <span data-acceptance-observable>Then the command exits 0 and prints <code>Hello, </code> followed by that name and <code>!</code> on one line.</span></p>
+<p data-acceptance-criterion data-anchor="acceptance-greet-name" data-story="story-greet"><span data-acceptance-scenario>Given a user with realcase installed, When they run <code>realcase greet</code> with a name,</span> <span data-acceptance-observable>Then the command exits 0 and prints <code>Hello, </code> followed by that name with surrounding spaces trimmed and <code>!</code> on one line.</span></p>
+<p data-acceptance-criterion data-anchor="acceptance-greet-json" data-story="story-greet"><span data-acceptance-scenario>Given a user with realcase installed, When they run <code>realcase greet</code> with a name and <code>--json</code>,</span> <span data-acceptance-observable>Then the command exits 0 and prints one JSON document holding the name and its greeting.</span></p>
 </section>
 
 <section data-spec-section="modular-boundaries" data-anchor="modular-boundaries" id="modular-boundaries">
